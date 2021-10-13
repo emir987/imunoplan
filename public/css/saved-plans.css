@@ -1,0 +1,54 @@
+.grid-menu {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(40px, 1fr));
+  -moz-column-gap: 2px;
+       column-gap: 2px;
+  row-gap: 0;
+  background-color: rgba(128, 128, 128, 0.596);
+  text-align: center;
+}
+
+.grid-menu div {
+  background-color: white;
+  padding: 2px 3px;
+}
+
+.grid-menu .header-item {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.596);
+  background-color: #41b883;
+  color: white;
+}
+
+.grid-menu .first-row {
+  padding-top: 12px;
+}
+
+.grid-menu div {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-menu .pointer span {
+  font-size: .9rem;
+  white-space: nowrap;
+  overflow: auto;
+  cursor: pointer;
+}
+
+.grid-menu .active {
+  color: green;
+  font-weight: bold;
+}
+
+.no-event {
+  pointer-events: none;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+

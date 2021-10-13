@@ -1,0 +1,55 @@
+@import "variables";
+
+.grid-menu {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(40px, 1fr));
+    column-gap: 2px;
+    row-gap: 0;
+    background-color: rgba(128, 128, 128, 0.596);
+    text-align: center;
+
+    div {
+        background-color: white;
+        padding: 2px 3px;
+    }
+
+    .header-item {
+        border-bottom: 2px solid rgba(128, 128, 128, 0.596);
+        background-color: $my-green;
+        color: white;
+    }
+
+    .first-row {
+        padding-top: 12px;
+    }
+
+    div {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pointer span {
+        font-size: .9rem;
+        white-space: nowrap;
+        overflow: auto;
+        cursor: pointer;
+    }
+
+    .active {
+        color: green;
+        font-weight: bold;
+    }
+
+}
+
+.no-event {
+    pointer-events: none;
+}
+
+[disabled] {
+    cursor: not-allowed;
+}

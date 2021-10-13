@@ -1,0 +1,23 @@
+@import "variables";
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: $our-black;
+    padding: 8px 30px;
+    color: white;
+}
+
+.social {
+    cursor: default;
+
+    i {
+        padding: 0 4px;
+        transition: .2s all ease;
+
+        &:hover {
+            filter: drop-shadow(2px 4px 6px black);
+        }
+    }
+}

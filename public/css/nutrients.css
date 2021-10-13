@@ -1,0 +1,50 @@
+.about-nutrients {
+  text-align: center;
+  margin: 0 4px;
+}
+
+.about-nutrients p:last-child {
+  color: #60B87A;
+  font-weight: 700;
+}
+
+.nutrients-circles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991.98px) {
+  .nutrients-circles .circle {
+    margin: 8px 12px !important;
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .nutrients-circles .circle img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .nutrients-circles .circle {
+    margin: 8px 12px !important;
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .nutrients-circles .circle img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+.c-green {
+  background-color: #61B879;
+}
+
+.c-khaki {
+  background-color: #B8AF60;
+}
+

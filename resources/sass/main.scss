@@ -1,0 +1,358 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato',
+        sans-serif !important;
+    color: #555 !important;
+    scroll-behavior: smooth;
+    background-color: white;
+
+    @media #{$xxl} {
+        font-size: 1.2rem !important;
+    }
+}
+
+.grid-parent-text {
+    padding: 3px 8px;
+    margin: 40px auto 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 22em)) 1fr;
+}
+
+.grid-parent-text-wide {
+    padding: 3px 8px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 28em)) 1fr;
+}
+
+.text-header {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0px auto 20px;
+}
+
+.vitamin-click-text {
+    color: $my-green;
+    font-weight: bold;
+}
+
+.grid-text {
+    grid-column: 2/4;
+}
+
+.multiselect__placeholder {
+    padding-top: 0px !important;
+}
+
+.multiselect__content-wrapper {
+    border-radius: 8px !important;
+}
+
+.placeholder {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+}
+
+
+.multiselect {
+    height: 40px;
+}
+
+
+//buttons
+
+.button-gray {
+    justify-content: center;
+}
+
+.button-green,
+.button-gray,
+.button-red,
+.button-cancel {
+    text-align: center;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    padding: 6px 22px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.button-green,
+.btn-login,
+.button-gray,
+.button-red,
+.button-cancel {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &:focus {
+        outline: none !important;
+    }
+
+    &:hover {
+        &:after {
+            left: 120%;
+            transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    }
+
+    &:after {
+        background: #fff;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: 0;
+    }
+}
+
+.button-gray {
+    background-color: $dark-gray;
+    color: white;
+
+    &:focus {
+        box-shadow: 0 0 0 4px white,
+            0 0 0 8px $dark-gray;
+    }
+}
+
+.button-green {
+    background-color: $my-green;
+    color: white;
+
+    &:focus {
+        box-shadow: 0 0 0 4px white,
+            0 0 0 8px $my-green;
+    }
+}
+
+.button-red {
+    background-color: rgb(194, 32, 26);
+    color: white;
+
+    &:focus {
+        box-shadow: 0 0 0 4px white,
+            0 0 0 8px rgb(194, 32, 26);
+    }
+}
+
+.btn-login {
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0 22px;
+    border-radius: 6px;
+    border: 2px solid $my-green;
+    background-color: $my-green;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &:focus {
+        box-shadow: 0 0 0 4px white,
+            0 0 0 8px $my-green;
+    }
+}
+
+.card {
+    border: 1px solid $my-green;
+}
+
+.card-header {
+    text-align: center;
+    font-size: 20px;
+    color: $our-black;
+}
+
+
+.w-33 {
+    width: 33% !important;
+}
+
+.w-10 {
+    width: 10% !important;
+}
+
+.w-23 {
+    width: 23% !important;
+}
+
+.error_input {
+    border-color: red !important;
+    background-color: snow !important;
+
+    .multiselect__tags {
+        border-color: red !important;
+        background-color: snow !important;
+    }
+}
+
+
+.button-cancel {
+    background-color: #dc3545;
+    color: white;
+
+    &:focus {
+        box-shadow: 0 0 0 4px white,
+            0 0 0 8px #dc3545;
+    }
+}
+
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 116px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        transform: translateY(-116px);
+    }
+
+    @include media-breakpoint-down(md) {
+        top: 40px !important;
+
+        img {
+            transform: translateY(40px) !important;
+        }
+    }
+}
+
+.lds_dual_ring {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    z-index: 999;
+}
+
+.lds_dual_ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: $my-green transparent $my-green transparent;
+    animation: lds_dual_ring 1s linear infinite;
+}
+
+
+.loaderWhite {
+    position: absolute;
+    right: 10%;
+    top: 0;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    z-index: 999;
+}
+
+.loaderWhite:after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-top: 3px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: white transparent white transparent;
+    animation: lds_dual_ring 1s linear infinite;
+}
+
+
+@keyframes lds_dual_ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-body {
+    display: none;
+}
+
+.loader-gif {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+
+    img {
+        max-width: 500px;
+    }
+}
+
+
+#password-show {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+//add photo
+.upload-picture-new {
+    position: relative;
+    background-image: url("/assets/admin/unknown-user.svg");
+    display: flex;
+    justify-self: center;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-position: center !important;
+    background-size: cover !important;
+
+    i {
+        position: absolute;
+        right: -8px;
+        top: -8px;
+        color: red;
+        cursor: pointer;
+    }
+}
+
+.lbl-photo {
+    width: fit-content;
+    margin: auto;
+}
+
+.lbl_add_recipe {
+    width: 53px;
+    text-align: end;
+}

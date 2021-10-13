@@ -1,0 +1,219 @@
+@import "variables";
+
+.circle-square-items {
+    margin-top: 34px;
+    display: flex;
+    justify-content: space-around;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.circle-square-items>div:first-child {
+    @include media-breakpoint-down(md) {
+        margin-bottom: 90px;
+    }
+}
+
+.circle-square {
+    position: relative;
+    margin: 20px;
+    width: 40%;
+    height: auto;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    background-color: #dfdfdf;
+    border: 2px solid #D7D7D7;
+
+    @include media-breakpoint-down(md) {
+        width: 80%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 95%;
+    }
+
+    .circle-outer {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        background-color: white;
+        padding: 12px;
+
+        .circle-inner {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            img {
+                margin: auto;
+                width: 60%;
+                height: 60%;
+            }
+        }
+    }
+
+    .square-content {
+        max-height: 1000px;
+        padding: 8px 14px;
+        margin-top: 48px;
+        transition: max-height 1s ease;
+        overflow: hidden;
+        min-height: 120px;
+
+        .square-content-header {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+    }
+}
+
+.mineral-name {
+    text-align: center;
+    margin-top: -50px;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 95px;
+    }
+}
+
+.circle-item .circle {
+    @include media-breakpoint-down(sm) {
+
+        width: 50px !important;
+        height: 50px !important;
+        margin: 5px 6px !important;
+        font-size: 12px;
+    }
+}
+
+.nutrients-circles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1040px;
+    margin: auto;
+    margin-bottom: 100px;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 80px !important;
+
+    }
+}
+
+
+.vitamins-bg {
+    background-color: #e0c249;
+}
+
+.circle-item:hover .vitamins-bg {
+    background-color: #388C3B;
+}
+
+.green-bg {
+    background-color: #388C3B;
+}
+
+.vitamins-font {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 8px 30px !important;
+
+    @include media-breakpoint-down(lg) {
+        margin: 8px 22px !important;
+
+    }
+}
+
+
+.sources-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+
+    span {
+        margin-left: 6px;
+    }
+}
+
+
+.minerals_margin {
+    margin: 8px 22px !important;
+
+    @include media-breakpoint-down(lg) {
+        margin: 8px 18px !important;
+
+    }
+}
+
+.heart-pulse:hover img {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        width: 60%;
+        height: 60%;
+    }
+
+    25% {
+        width: 70%;
+        height: 70%;
+    }
+
+    50% {
+        width: 60%;
+        height: 60%;
+    }
+
+    70% {
+        width: 70%;
+        height: 70%;
+    }
+
+    100% {
+        width: 60%;
+        height: 60%;
+    }
+}
+
+
+.ul-green {
+    list-style: none;
+
+    li {
+        margin: 10px 0;
+    }
+}
+
+.ul-green li::before {
+    content: "\2022";
+    color: green;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.carb-h1 {
+    text-align: center;
+    color: #645f5f;
+    margin-bottom: 2rem;
+}
+
+.photo-description {
+    font-size: 15px;
+    color: gray;
+    margin-top: 12px;
+    text-align: center;
+}

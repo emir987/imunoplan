@@ -1,0 +1,352 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;
+
+0,400;0,500;0,600;1,400;1,600&display=swap);.body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.sidebar-title {
+  position: relative;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px !important;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4b4b4b;
+  margin-bottom: 14px !important;
+}
+
+.sidebar-title::after {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #41b883;
+}
+
+.activeCategory {
+  color: #41b883 !important;
+  font-weight: bold;
+}
+
+.activeCategory:hover {
+  color: #4b4b4b !important;
+}
+
+.sidebar-items div {
+  padding: 0 2px;
+}
+
+.sidebar-links,
+.recent-posts {
+  color: #4b4b4b;
+}
+
+.sidebar-links div,
+.sidebar-links .tag,
+.recent-posts div,
+.recent-posts .tag {
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.sidebar-links div:hover,
+.sidebar-links .tag:hover,
+.recent-posts div:hover,
+.recent-posts .tag:hover {
+  color: #41b883;
+}
+
+.blog-card {
+  padding: 0 8px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .blog-card {
+    height: 200px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog-card {
+    padding: 0 16px !important;
+  }
+}
+
+.blog-card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+  max-height: 200px;
+}
+
+@media (max-width: 767.98px) {
+  .mob-no-padding,
+  .blog-card-content {
+    padding: 0 !important;
+  }
+}
+
+.blog-info img {
+  cursor: auto !important;
+}
+
+.blog-card-content {
+  padding: 0 8px;
+}
+
+.blog-card-content a {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 0;
+  border: 0;
+  cursor: pointer;
+  color: #41b883 !important;
+  transition: .1s all ease;
+}
+
+.blog-card-content a:hover {
+  color: #4b4b4b !important;
+}
+
+.blog-image {
+  position: relative;
+  overflow: hidden;
+  background: #f8f8f8;
+  padding: 0 !important;
+}
+
+.blog-image img {
+  cursor: pointer;
+  transition: 1s all ease;
+}
+
+.blog-image img:hover {
+  transform: scale(1.03);
+}
+
+.blog-image .blog-date {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 8px 16px;
+  border-radius: 25px;
+  color: #41b883;
+  background: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.open-blog-title {
+  transition: .1s all ease;
+  cursor: pointer;
+}
+
+.open-blog-title:hover {
+  color: #41b883;
+}
+
+.open-blog-title::first-letter {
+  text-transform: uppercase;
+}
+
+.recent-posts div {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.autocomplete {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: white !important;
+  z-index: 1;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
+  margin: 0 4px;
+}
+
+.autocomplete div {
+  margin: 3px 0;
+  padding: 3px 0;
+  cursor: pointer;
+  box-shadow: 0 -1px 0 rgba(143, 143, 143, 0.452);
+}
+
+.autocomplete div:hover {
+  background: #eeeeee;
+}
+
+.autocomplete span {
+  padding: 3px 8px;
+  display: block;
+}
+
+.activeAutocomplete {
+  background: #eeeeee;
+}
+
+.srch_bar {
+  width: 100%;
+  padding: 0 2px;
+  position: relative;
+}
+
+.srch_bar input {
+  width: 100%;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  padding: 6px 12px;
+  background: none;
+}
+
+.srch_bar .input-group-addon button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  padding: 0;
+  color: #707070;
+  font-size: 18px;
+}
+
+.srch_bar .input-group-addon {
+  margin: 0 0 0 -27px;
+  font-size: 8px;
+}
+
+.srch_bar .input-group-addon button {
+  outline: none !important;
+}
+
+.srch_bar .input-group-addon button i {
+  font-size: 15px;
+}
+
+.search-for {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.search-for:hover {
+  text-decoration: line-through;
+  color: red !important;
+}
+
+.published_at {
+  text-decoration: underline;
+  font-style: oblique;
+}
+
+@-webkit-keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+.is_loading .blog-card-content h4,
+.is_loading p,
+.is_loading a {
+  color: transparent !important;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+          animation: 1.5s shine linear infinite;
+}
+
+.is_loading img,
+.is_loading .blog-date {
+  display: none;
+}
+
+.is_loading .blog-image {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+          animation: 1.5s shine linear infinite;
+}
+
+.pagination-custom {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  padding: 6px 20px !important;
+  border-radius: 50px;
+}
+
+@media (max-width: 575.98px) {
+  .pagination-custom {
+    font-size: 14px;
+    padding: 6px 12px !important;
+  }
+}
+
+.pagination-custom .next,
+.pagination-custom .prev {
+  background-color: white;
+  border: none;
+}
+
+.pagination-custom .next:focus,
+.pagination-custom .prev:focus {
+  outline: none !important;
+}
+
+.pagination-custom .paginate-item,
+.pagination-custom .prev,
+.pagination-custom .next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+  .pagination-custom .paginate-item,
+  .pagination-custom .prev,
+  .pagination-custom .next {
+    margin: 0 2px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+.pagination-custom .active_paginate,
+.pagination-custom .paginate-item:hover {
+  font-weight: bold;
+  border-radius: 50%;
+  background: #525252;
+  color: white;
+}
+
+.preview {
+  margin: 30px 0;
+}
+

@@ -1,0 +1,19 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/main.css": "/css/main.css",
+    "/css/nav.css": "/css/nav.css",
+    "/css/nutrients.css": "/css/nutrients.css",
+    "/css/footer.css": "/css/footer.css",
+    "/css/circle-item.css": "/css/circle-item.css",
+    "/css/vitamins.css": "/css/vitamins.css",
+    "/css/plan.css": "/css/plan.css",
+    "/css/banner.css": "/css/banner.css",
+    "/css/home.css": "/css/home.css",
+    "/css/form.css": "/css/form.css",
+    "/css/add-nutrient.css": "/css/add-nutrient.css",
+    "/css/loading.css": "/css/loading.css",
+    "/css/saved-plans.css": "/css/saved-plans.css",
+    "/css/messages.css": "/css/messages.css",
+    "/css/blog.css": "/css/blog.css"
+}

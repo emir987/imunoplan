@@ -1,0 +1,31 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+// Body
+$body-bg: #f8fafc;
+
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$my-green: #1c9941;
+$my-green: #54c661;
+$my-green:#36b868;
+$my-green:#41b883;
+
+$dark-gray: #747474;
+$light-gray: #C7C7C7;
+$lighter-gray: #F2F2F2;
+$dirty-white: #F9F9F9;
+$khaki: #B8AF60;
+$our-black: #4b4b4b;
+$xxl: "(min-width: 1800px)";
